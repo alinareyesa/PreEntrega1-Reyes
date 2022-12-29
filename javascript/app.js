@@ -3,7 +3,6 @@ let montoTotal = 0
 function agregarAlTotal(monto) {
 
     montoTotal = montoTotal + monto
-    menuPrincipal()
 }
 
 let item1 = 250
@@ -11,11 +10,12 @@ let item2 = 300
 let item3 = 450
 
 function menuPrincipal() {
-    
+
     let opcion
     do {
         opcion = prompt ("Seleccione un item \n 1- Item 1 \n 2- Item 2 \n 3- Item 3 \n 4- Listo \n 5- Salir ")
         opcion = parseInt (opcion)
+        console.log(opcion)
         switch(opcion)
         {
             case 1: 
@@ -43,7 +43,7 @@ function menuPrincipal() {
             default:
                 alert("Opcion invalida")
         }
-    } while (opcion !=5)
+    } while (opcion != 5)
 }
 
 menuPrincipal()
@@ -62,7 +62,6 @@ function cuponDescuento() {
 
         default: 
             alert ("Opcion invalida")
-            cuponDescuento()
     }
 }
 
@@ -80,7 +79,6 @@ function aplicarDescuento(cupon) {
     }
     else {
         alert("Cupon invalido")
-        cuponDescuento()
     }
 
 }
