@@ -6,11 +6,11 @@ class Carrito {
         this.productos.push(producto)
     }
 
-    sacarProducto(producto) {
-        let indice = this.productos.indexOf(producto)
-        if (indice) {
-            this.productos.splice(indice,1)
-        }
+    sacarProducto(nombreProductoAEliminar) {
+        const listaResutante = this.productos.filter ((producto) => {
+            return producto.nombre != nombreProductoAEliminar
+        })
+        this.productos = listaResutante
     }
 
     calcularTotal () {

@@ -8,7 +8,7 @@ const todosLosProductos = [producto1, producto2, producto3, producto4]
 function menuPrincipal() { 
     let opcion
     do {
-        opcion = prompt ("Seleccione un producto \n 1- Choker goth \n 2- Choker lolita \n 3- Headband lolita \n 4- Headband goth \n 5- Filtrar por categoria \n 6- Listo \n 7- Salir ")
+        opcion = prompt ("Seleccione un producto \n 1- Choker goth \n 2- Choker lolita \n 3- Headband lolita \n 4- Headband goth \n 5- Eliminar producto del carrito \n 6- Mostrar carrito \n 7- Filtrar por categoria \n 8- Terminar compra \n 9- Salir ")
         opcion = parseInt (opcion)
         console.log(opcion)
         switch(opcion)
@@ -34,6 +34,27 @@ function menuPrincipal() {
                 break
 
             case 5:
+                if (carrito.productos.length != 0) {
+                    const productoAEliminar = prompt ("Ingrese el nombre del producto a eliminar")
+                    const carritoAntes = carrito.productos
+                    carrito.sacarProducto(productoAEliminar)
+                    if (carritoAntes.length == carrito.productos.length) {
+                        alert ("El producto ingresado no se encuentra en su carrito")
+                    }
+                    else {
+                        alert ("El producto ha sido eliminado")
+                    }
+                }
+                else {
+                    alert ("Su carrito esta vacio")
+                }
+                break
+
+            case 6:
+                alert ("Su carrito tiene: " + carrito.mostrarCarrito())
+                break
+
+            case 7:
                 const categoria = prompt ("Ingrese la categoría \n choker \n headband")
                 const nombresProductosFiltrados = filtrarCategoria(categoria)
                 if (nombresProductosFiltrados.length > 0) {
@@ -44,7 +65,7 @@ function menuPrincipal() {
                 }
                 break
 
-            case 6: 
+            case 8: 
                 if (carrito.calcularTotal () == 0) {
                     alert ("No tiene productos en el carrito")
                 }
@@ -52,12 +73,12 @@ function menuPrincipal() {
                     cuponDescuento()
                 }
                  break
-            case 7:
+            case 9:
                 break
             default:
                 alert("Opcion invalida")
         }
-    } while (opcion != 7)
+    } while (opcion != 9)
 }
 
 menuPrincipal()
