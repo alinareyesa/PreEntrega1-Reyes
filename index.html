@@ -5,12 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Primera entrega</title>
+    <link href="./css/estilos.css" rel="stylesheet"/>
 </head>
 <body>
-    <h1>Selección de items a comprar y aplicación de descuento</h1>
+    <h1 class="titulo">Dreaminchuchu store</h1>
+    <h2 class="subtitulo">Productos</h2>
 
-    <script src="./javascript/Productos.js"></script>
-    <script src="./javascript/Carrito.js"></script>
+    <!--productos-->
+    <main id="card-productos">
+    </main>
+
+    <!--boton ver carrito-->
+     <div id="ver-carrito">
+        <img class="carrito-boton" src="assets/carritoicon.png"/>
+    </div>
+
+    <!--carrito-->
+     <div id="carrito-contenedor" class="carrito-contenedor">
+    </div>
+    <script src="./javascript/items.js"></script>
+
    <script src="./javascript/app.js" ></script>
+
 </body>
 </html>
