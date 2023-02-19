@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Primera entrega</title>
+    <title>ProyectoFinal+Reyes</title>
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet"/>
     <link href="./css/estilos.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="./assets/logo1.png">
 </head>
 <body>
-    <h1 class="titulo">Dreaminchuchu store</h1>
-    <h2 class="subtitulo">Productos</h2>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/logo.png"/>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                  <a href="">Productos</a>
+                  <ul>
+                    <li><a href="">Chokers</a></li>
+                    <li><a href="">Headbands</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Comprar</a></li>
+                <li><a href="">Info</a></li>
+              </ul>
+        </div>
+    </nav>
+
+    <div class="aviso">
+        <h2>Envios a todo el país a través de DAC o Correo Uruguayo</h2>
+    </div>
+
+    <h1 class="titulo">Principales productos (´｡• ω •｡`)</h2>
 
     <!--productos-->
     <main id="card-productos">
@@ -23,8 +51,17 @@
     <!--carrito-->
      <div id="carrito-contenedor" class="carrito-contenedor">
     </div>
-    <script src="./javascript/items.js"></script>
 
+    <footer>
+        <p>Contacto: instagram <a href="https://www.instagram.com/dreaminchuchu.uy/">@dreaminchuchu.uy</a> / whatsapp <a href="https://web.whatsapp.com/">+598 095 863 295</a></p>
+    </footer>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./javascript/Productos.js"></script>
+    <script src="./javascript/Carrito.js"></script>
+    <script src="./javascript/items.json"></script>
    <script src="./javascript/app.js" ></script>
 
 </body>
